@@ -1,3 +1,5 @@
+import dotenv from 'dotenv';
+dotenv.config();
 import express from 'express';
 import cors from 'cors';
 import { connectDB } from './config/database';
@@ -10,7 +12,7 @@ import reportesRoutes from './routes/reportes.routes';
 import gastosRoutes from './routes/gastos.routes';
 import proveedoresRoutes from './routes/proveedores.routes';
 const app = express();
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 8001;
 
 // Middlewares
 app.use(cors());
