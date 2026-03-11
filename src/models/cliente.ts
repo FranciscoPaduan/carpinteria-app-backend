@@ -5,6 +5,7 @@ export interface ICliente extends Document {
   telefono: string;
   email?: string;
   direccion?: string;
+  ciudad?: string;
   createdAt: Date;
 }
 
@@ -13,6 +14,7 @@ const ClienteSchema = new Schema<ICliente>({
   telefono: { type: String, required: true },
   email: { type: String },
   direccion: { type: String },
+  ciudad: { type: String },
   createdAt: { type: Date, default: Date.now }
 });
 

@@ -7,6 +7,7 @@ export interface IProveedor extends Document {
   email?: string;
   direccion?: string;
   activo: boolean;
+  ciudad?: string;
   createdAt: Date;
 }
 
@@ -16,6 +17,7 @@ const ProveedorSchema = new Schema<IProveedor>({
   telefono: { type: String, required: true },
   email: { type: String },
   direccion: { type: String },
+  ciudad: { type: String },
   activo: { type: Boolean, default: true },
   createdAt: { type: Date, default: Date.now }
 });
